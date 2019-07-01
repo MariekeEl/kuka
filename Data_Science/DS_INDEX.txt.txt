@@ -1,0 +1,26 @@
+Create Indexes:
+Advantage: Usefull when the database contains a hugh amount of data and you have to 
+request often data
+Disadvantage: The more indexes a table contains the more storage is needed -> the maximum
+of storage for a table can be reached faster.
+If a table contains a lot of indexes the speed for updating the data loses its efficiency
+because the indexes needed to be updated as well.
+How a Index work: it works like an index in a book you don't have to go
+throug every single page for searching a word you just go to the Index
+
+Query:
+CREATE INDEX person_first_name_idx
+ON person (first_name;
+Example for Running Query:
+SELECT COUNT(*)
+FROM person
+WHERE first_name = 'Emma';
+
+Multicolumn Index:
+CREATE INDEX person_first_name_last_name_idx
+ON person (last_name, first_name);
+
+
+Sources:
+- http://www.datenbanken-verstehen.de/datenmodellierung/datenbank-index/
+- https://www.youtube.com/watch?v=fsG1XaZEa78
